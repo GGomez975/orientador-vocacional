@@ -1,0 +1,75 @@
+Listed directory scratch
+Listed directory orientador-vocacional
+Viewed package.json:1-20
+Viewed server.js:1-34
+Listed directory public
+Listed directory src
+Listed directory css
+Listed directory js
+Listed directory db
+Viewed index.html:1-49
+Viewed app.js:1-61
+Viewed api.js:1-62
+Listed directory views
+Used tool: manage_task
+Viewed database.js:1-85
+Viewed api.js:1-168
+Viewed home.js:1-36
+Viewed test.js:1-96
+Viewed results.js:1-82
+Viewed seed.js:1-143
+Used tool: list_permissions
+Ran command: `npm run seed`
+Ran command: `node src/db/seed.js`
+Viewed universities.js:1-44
+Viewed admin.js:1-155
+Viewed style.css:1-265
+Ran command: `node server.js`
+Used tool: manage_task
+Used tool: manage_task
+Viewed task-81.log:1-3
+Used tool: manage_task
+Listed directory orientador_vocacional
+
+El motivo por el cual no te está cargando la interfaz (y posiblemente se queda en "Cargando...") al abrir el archivo directamente en tu navegador es técnico y muy común. Aquí te explico exactamente por qué ocurre y cómo solucionarlo en pocos segundos:
+
+### 🔍 ¿Por qué no carga al hacer doble clic en `index.html`?
+
+1. **Seguridad del Navegador (CORS):** La aplicación moderna utiliza JavaScript modular (`type="module"`). Por razones de seguridad, los navegadores bloquean la ejecución de estos módulos cuando se abren de manera local usando el protocolo `file://` (haciendo doble clic al archivo).
+2. **Rutas Absolutas:** El proyecto tiene configuradas rutas como `/css/style.css` y `/js/app.js`. Si lo abres directamente, el navegador intentará buscarlos en la raíz de tu disco (ej. `C:\css\style.css`), donde no existen.
+3. **Dependencia del Servidor (Backend):** Esta aplicación no es solo una página estática; cuenta con un servidor en **Express.js** y una base de datos **SQLite** para gestionar dinámicamente las carreras, universidades venezolanas y el cálculo del test.
+
+---
+
+### 🚀 Cómo solucionarlo y hacerla funcionar
+
+Dado que en los sistemas Windows la política de ejecución de scripts de PowerShell suele bloquear comandos como `npm start` (mostrando un error del archivo `npm.ps1`), la forma más directa y libre de errores para iniciar tu aplicación es la siguiente:
+
+1. **Abre tu terminal** (PowerShell o CMD).
+2. **Navega a la carpeta del proyecto** ejecutando:
+   ```powershell
+   cd "C:\Users\gjgom\.gemini\antigravity\scratch\orientador-vocacional"
+   ```
+3. **Inicia el servidor directamente con Node** (esto evita las restricciones de políticas de PowerShell):
+   ```powershell
+   node server.js
+   ```
+4. Verás en tu consola la confirmación de que todo está listo:
+   ```text
+   📦 Conectado a la base de datos SQLite.
+   🚀 Servidor de Orientador Vocacional corriendo en http://localhost:3000
+   ```
+5. **Abre tu navegador** e ingresa a: **[http://localhost:3000](http://localhost:3000)**. 
+
+Ahí verás la interfaz cargada perfectamente con un diseño moderno, animaciones fluidas y conectada a la base de datos.
+
+---
+
+### 💡 ¿Prefieres una versión autónoma sin servidor?
+
+Si por alguna razón necesitas una versión más sencilla que funcione **sin necesidad de encender un servidor**, simplemente abriendo el archivo `index.html` con doble clic, recuerda que tienes una versión estática completa e independiente en esta carpeta:
+
+📂 **`C:\Users\gjgom\.gemini\antigravity\scratch\orientador_vocacional`** *(con guion bajo `_`)*
+
+> [!TIP]
+> Te recomiendo establecer la carpeta `C:\Users\gjgom\.gemini\antigravity\scratch\orientador-vocacional` como tu **espacio de trabajo activo** en tu editor de código para facilitar su desarrollo y visualización.
