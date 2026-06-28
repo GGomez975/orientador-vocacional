@@ -1,11 +1,11 @@
-const express = require('express');
-const cors = require('cors');
-const path = require('path');
-const db = require('./src/db/database');
-const apiRoutes = require('./src/routes/api');
+import express from ('express');
+import cors from ('cors');
+import path from ('path');
+import db from ('./src/db/database');
+import apiRoutes from('./src/routes/api');
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+import app from express();
+import PORT from process.env.PORT || 3000;
 
 // Configuración de Middlewares
 app.use(cors());
