@@ -121,7 +121,7 @@ router.get('/areas', async (req, res) => {
 // --- SISTEMA DE RECOMENDACIÓN DEL TEST ---
 router.post('/test/calculate', async (req, res) => {
     try {
-        const { answers } = req.body;
+        const { answers } = req.body; 
         // Formato esperado: [{ areaMatch: "Salud", points: 1 }, { areaMatch: "Tecnología", points: 2 }]
 
         if (!answers || !Array.isArray(answers)) {

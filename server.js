@@ -25,9 +25,15 @@ app.use((req, res) => {
 
 // Iniciar base de datos y luego el servidor
 db.initDatabase().then(() => {
-    app.listen(PORT, () => {
-        console.log(`🚀 Servidor de Orientador Vocacional corriendo en http://localhost:${PORT}`);
-    });
+    // Solo iniciamos el servidor con app.listen si no estamos en Vercel (evita conflictos en serverless)
+    if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+        app.listen(PORT, () => {
+            console.log(`🚀 Servidor de Orientador Vocacional corriendo en http://localhost:${PORT}`);
+        });
+    }
 }).catch(err => {
     console.error('❌ Error al inicializar la base de datos:', err);
 });
+
+module.exports = app;
+

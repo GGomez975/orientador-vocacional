@@ -3,7 +3,7 @@ export async function renderHome() {
     return `
         <div class="home-container" style="text-align: center; max-width: 800px; margin: 0 auto; padding-top: 5vh;">
             <div class="logo-container" style="margin-bottom: 2rem;">
-                <img src="/assets/logo.png" alt="Logo Instituto Br. Elias Cordero U." style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--glass-border); box-shadow: 0 10px 25px rgba(0,0,0,0.4); transition: transform 0.3s ease, box-shadow 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.4)';">
+                <img src="/assets/logo.png" alt="Logo Instituto Br. Elias Cordero U." style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--glass-border); box-shadow: 0 10px 25px rgba(0,0,0,0.4); transition: transform 0.3s ease, box-shadow 0.3s ease; display: inline-block;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 15px 30px rgba(0,0,0,0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.4)';" onerror="this.src='/assets/Logo Ibecu.png';">
             </div>
             <div class="hero-badge" style="background: rgba(236,72,153,0.2); color: var(--secondary); padding: 0.5rem 1.5rem; border-radius: 50px; display: inline-block; margin-bottom: 1.5rem; font-weight: 600; font-size: 0.9rem;">
                 Conoce tu futuro en Venezuela ✨

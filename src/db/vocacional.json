@@ -1,0 +1,314 @@
+{
+  "areas": [
+    {
+      "id": 1,
+      "name": "Ciencias de la Salud",
+      "description": "Carreras relacionadas al cuidado, prevención y tratamiento de enfermedades."
+    },
+    {
+      "id": 2,
+      "name": "Ingeniería y Tecnología",
+      "description": "Carreras basadas en matemáticas, física impulsadas a resolver problemas prácticos."
+    },
+    {
+      "id": 3,
+      "name": "Ciencias Sociales y Humanidades",
+      "description": "Estudio del comportamiento humano, sociedad, historia y leyes."
+    },
+    {
+      "id": 4,
+      "name": "Ciencias Básicas",
+      "description": "Matemáticas, física, química o biología puras."
+    },
+    {
+      "id": 5,
+      "name": "Arte y Arquitectura",
+      "description": "Carreras creativas con un componente estético y funcional."
+    },
+    {
+      "id": 6,
+      "name": "Educación",
+      "description": "Formación y enseñanza en diversas disciplinas."
+    }
+  ],
+  "universities": [
+    {
+      "id": 1,
+      "name": "Universidad Central de Venezuela (UCV)",
+      "type": "Pública",
+      "location": "Caracas"
+    },
+    {
+      "id": 2,
+      "name": "Universidad Simón Bolívar (USB)",
+      "type": "Pública",
+      "location": "Caracas"
+    },
+    {
+      "id": 3,
+      "name": "Universidad Católica Andrés Bello (UCAB)",
+      "type": "Privada",
+      "location": "Caracas / Guayana"
+    },
+    {
+      "id": 4,
+      "name": "Universidad de Los Andes (ULA)",
+      "type": "Pública",
+      "location": "Mérida"
+    },
+    {
+      "id": 5,
+      "name": "Universidad del Zulia (LUZ)",
+      "type": "Pública",
+      "location": "Maracaibo"
+    },
+    {
+      "id": 6,
+      "name": "Universidad de Carabobo (UC)",
+      "type": "Pública",
+      "location": "Valencia"
+    },
+    {
+      "id": 7,
+      "name": "Universidad de Oriente (UDO)",
+      "type": "Pública",
+      "location": "Anzoátegui / Sucre / Monagas"
+    },
+    {
+      "id": 8,
+      "name": "Universidad Metropolitana (UNIMET)",
+      "type": "Privada",
+      "location": "Caracas"
+    },
+    {
+      "id": 9,
+      "name": "Universidad Nacional Experimental Politécnica (UNEXPO)",
+      "type": "Pública",
+      "location": "Caracas / Barquisimeto / Puerto Ordaz"
+    },
+    {
+      "id": 10,
+      "name": "Universidad Católica Santa Rosa (UCSAR)",
+      "type": "Privada",
+      "location": "Caracas"
+    },
+    {
+      "id": 11,
+      "name": "Universidad Nacional Experimental de los Llanos Occidentales Ezequiel Zamora (UNELLEZ)",
+      "type": "Pública",
+      "location": "Barinas / Apure / Cojedes / Portuguesa"
+    },
+    {
+      "id": 12,
+      "name": "Universidad Centroccidental Lisandro Alvarado (UCLA)",
+      "type": "Pública",
+      "location": "Lara (Barquisimeto)"
+    }
+  ],
+  "careers": [
+    {
+      "id": 1,
+      "title": "Medicina",
+      "description": "Formación de profesionales capacitados para diagnosticar, tratar y prevenir enfermedades humanas.",
+      "labor_field": "Hospitales clínicos, consultorios privados, ambulatorios, investigación, salud pública.",
+      "duration": "6 años",
+      "area_id": 1
+    },
+    {
+      "id": 2,
+      "title": "Enfermería",
+      "description": "Cuidados integrales de salud a individuos, familias y comunidades.",
+      "labor_field": "Clínicas y hospitales, centros de rehabilitación, docencia.",
+      "duration": "5 años",
+      "area_id": 1
+    },
+    {
+      "id": 3,
+      "title": "Ingeniería en Computación",
+      "description": "Desarrollo de software, arquitecturas de red, inteligencia artificial y gestión de sistemas informáticos.",
+      "labor_field": "Empresas de tecnología, bancos, telecomunicaciones, desarrollo independiente (freelance).",
+      "duration": "5 años",
+      "area_id": 2
+    },
+    {
+      "id": 4,
+      "title": "Ingeniería Informática",
+      "description": "Gestión y desarrollo de sistemas de información, bases de datos y seguridad.",
+      "labor_field": "Consultoría TI, corporaciones financieras, creación de startups.",
+      "duration": "5 años",
+      "area_id": 2
+    },
+    {
+      "id": 5,
+      "title": "Psicología",
+      "description": "Estudio de los procesos mentales, sensaciones, percepciones y el comportamiento del ser humano.",
+      "labor_field": "Clínica, orientación educativa, recursos humanos en empresas.",
+      "duration": "5 años",
+      "area_id": 3
+    },
+    {
+      "id": 6,
+      "title": "Arquitectura",
+      "description": "Arte y técnica de proyectar, diseñar y construir espacios y edificios.",
+      "labor_field": "Constructoras, diseño de interiores, planificación urbana o firmas de arquitectos.",
+      "duration": "5 años",
+      "area_id": 5
+    },
+    {
+      "id": 7,
+      "title": "Educación Mención Informática",
+      "description": "Formación de docentes con capacidades metodológicas y tecnológicas para la enseñanza.",
+      "labor_field": "Liceos, colegios, universidades, fundaciones educativas.",
+      "duration": "4 a 5 años",
+      "area_id": 6
+    },
+    {
+      "id": 8,
+      "title": "Física",
+      "description": "Estudio de los fenómenos del universo, desde partículas subatómicas hasta galaxias.",
+      "labor_field": "Centros de investigación, docencia universitaria, industria de instrumentación.",
+      "duration": "5 años",
+      "area_id": 4
+    },
+    {
+      "id": 9,
+      "title": "Ingeniería Civil",
+      "description": "Planificación, diseño y construcción de infraestructuras como carreteras, puentes, represas y edificios.",
+      "labor_field": "Empresas constructoras, consultorías de ingeniería, entes gubernamentales de infraestructura, libre ejercicio.",
+      "duration": "5 años",
+      "area_id": 2
+    },
+    {
+      "id": 10,
+      "title": "Derecho",
+      "description": "Estudio de las leyes, normas y principios jurídicos que regulan la convivencia social y la justicia.",
+      "labor_field": "Tribunales, firmas de abogados, asesoría legal empresarial, organismos públicos, diplomacia.",
+      "duration": "5 años",
+      "area_id": 3
+    },
+    {
+      "id": 11,
+      "title": "Odontología",
+      "description": "Prevención, diagnóstico y tratamiento de las enfermedades del aparato estomatognático (dientes, encías, boca).",
+      "labor_field": "Clínicas odontológicas, consultorios privados, hospitales, salud pública, investigación.",
+      "duration": "5 años",
+      "area_id": 1
+    },
+    {
+      "id": 12,
+      "title": "Comunicación Social",
+      "description": "Análisis, producción y difusión de mensajes e información a través de medios de comunicación masivos y digitales.",
+      "labor_field": "Canales de televisión, radio, prensa, agencias de publicidad, marketing digital, relaciones públicas.",
+      "duration": "5 años",
+      "area_id": 3
+    },
+    {
+      "id": 13,
+      "title": "Administración de Empresas",
+      "description": "Gestión estratégica, financiera y operativa de organizaciones para lograr la máxima eficiencia y rentabilidad.",
+      "labor_field": "Gerencia en empresas privadas y públicas, consultoría de negocios, emprendimientos propios, finanzas.",
+      "duration": "5 años",
+      "area_id": 3
+    },
+    {
+      "id": 14,
+      "title": "Ingeniería Química",
+      "description": "Transformación de materias primas en productos útiles a nivel industrial mediante procesos químicos y físicos.",
+      "labor_field": "Industria petrolera, petroquímica, farmacéutica, alimentaria, tratamiento de aguas, control ambiental.",
+      "duration": "5 años",
+      "area_id": 2
+    },
+    {
+      "id": 15,
+      "title": "Diseño Gráfico",
+      "description": "Creación de soluciones visuales para comunicar mensajes de manera efectiva mediante imágenes, textos y medios digitales.",
+      "labor_field": "Agencias de diseño y publicidad, departamentos de branding, editoriales, desarrollo web, freelance.",
+      "duration": "4 años",
+      "area_id": 5
+    },
+    {
+      "id": 16,
+      "title": "Medicina Veterinaria",
+      "description": "Diagnóstico, tratamiento y prevención de enfermedades en animales domésticos, silvestres y de producción.",
+      "labor_field": "Clínicas veterinarias, fincas y unidades de producción, zoológicos, laboratorios farmacéuticos, salud pública.",
+      "duration": "5 años",
+      "area_id": 1
+    },
+    {
+      "id": 17,
+      "title": "Ingeniería Agronómica",
+      "description": "Optimización de la producción agrícola y ganadera mediante la aplicación de ciencia y tecnología, conservando los recursos naturales.",
+      "labor_field": "Fincas agrícolas, empresas agroindustriales, entes gubernamentales de agricultura, asesoría técnica, investigación.",
+      "duration": "5 años",
+      "area_id": 2
+    }
+  ],
+  "career_university": [
+    { "career_id": 1, "university_id": 1 },
+    { "career_id": 1, "university_id": 4 },
+    { "career_id": 1, "university_id": 5 },
+    { "career_id": 1, "university_id": 6 },
+    { "career_id": 1, "university_id": 12 },
+    { "career_id": 2, "university_id": 1 },
+    { "career_id": 2, "university_id": 4 },
+    { "career_id": 2, "university_id": 6 },
+    { "career_id": 3, "university_id": 1 },
+    { "career_id": 3, "university_id": 2 },
+    { "career_id": 4, "university_id": 3 },
+    { "career_id": 5, "university_id": 1 },
+    { "career_id": 5, "university_id": 3 },
+    { "career_id": 6, "university_id": 1 },
+    { "career_id": 6, "university_id": 2 },
+    { "career_id": 6, "university_id": 4 },
+    { "career_id": 7, "university_id": 3 },
+    { "career_id": 8, "university_id": 1 },
+    { "career_id": 8, "university_id": 2 },
+    { "career_id": 8, "university_id": 4 },
+    { "career_id": 9, "university_id": 1 },
+    { "career_id": 9, "university_id": 3 },
+    { "career_id": 9, "university_id": 4 },
+    { "career_id": 9, "university_id": 5 },
+    { "career_id": 9, "university_id": 6 },
+    { "career_id": 9, "university_id": 7 },
+    { "career_id": 9, "university_id": 8 },
+    { "career_id": 9, "university_id": 9 },
+    { "career_id": 9, "university_id": 12 },
+    { "career_id": 10, "university_id": 1 },
+    { "career_id": 10, "university_id": 3 },
+    { "career_id": 10, "university_id": 4 },
+    { "career_id": 10, "university_id": 5 },
+    { "career_id": 10, "university_id": 6 },
+    { "career_id": 10, "university_id": 10 },
+    { "career_id": 10, "university_id": 11 },
+    { "career_id": 11, "university_id": 1 },
+    { "career_id": 11, "university_id": 4 },
+    { "career_id": 11, "university_id": 5 },
+    { "career_id": 11, "university_id": 6 },
+    { "career_id": 12, "university_id": 1 },
+    { "career_id": 12, "university_id": 3 },
+    { "career_id": 12, "university_id": 4 },
+    { "career_id": 12, "university_id": 5 },
+    { "career_id": 12, "university_id": 10 },
+    { "career_id": 13, "university_id": 1 },
+    { "career_id": 13, "university_id": 3 },
+    { "career_id": 13, "university_id": 7 },
+    { "career_id": 13, "university_id": 8 },
+    { "career_id": 13, "university_id": 11 },
+    { "career_id": 13, "university_id": 12 },
+    { "career_id": 14, "university_id": 1 },
+    { "career_id": 14, "university_id": 2 },
+    { "career_id": 14, "university_id": 4 },
+    { "career_id": 14, "university_id": 5 },
+    { "career_id": 14, "university_id": 7 },
+    { "career_id": 15, "university_id": 4 },
+    { "career_id": 15, "university_id": 5 },
+    { "career_id": 16, "university_id": 11 },
+    { "career_id": 16, "university_id": 12 },
+    { "career_id": 17, "university_id": 1 },
+    { "career_id": 17, "university_id": 4 },
+    { "career_id": 17, "university_id": 5 },
+    { "career_id": 17, "university_id": 7 },
+    { "career_id": 17, "university_id": 11 },
+    { "career_id": 17, "university_id": 12 }
+  ]
+}

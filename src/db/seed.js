@@ -4,45 +4,32 @@ async function seed() {
     console.log("Iniciando llenado de datos base...");
     await dbUtils.initDatabase();
 
-    // Insertar áreas principales de forma idempotente
-    const defaultAreas = [
-        ['Ciencias de la Salud', 'Carreras relacionadas al cuidado, prevención y tratamiento de enfermedades.'],
-        ['Ingeniería y Tecnología', 'Carreras basadas en matemáticas, física impulsadas a resolver problemas prácticos.'],
-        ['Ciencias Sociales y Humanidades', 'Estudio del comportamiento humano, sociedad, historia y leyes.'],
-        ['Ciencias Básicas', 'Matemáticas, física, química o biología puras.'],
-        ['Arte y Arquitectura', 'Carreras creativas con un componente estético y funcional.'],
-        ['Educación', 'Formación y enseñanza en diversas disciplinas.']
-    ];
-
-    for (const [name, description] of defaultAreas) {
-        const exists = await dbUtils.query("SELECT id FROM areas WHERE name = ?", [name]);
-        if (exists.length === 0) {
-            await dbUtils.run("INSERT INTO areas (name, description) VALUES (?, ?)", [name, description]);
-        }
+    // Comprobar si ya hay áreas
+    const result = await dbUtils.query("SELECT COUNT(*) as count FROM areas");
+    if (result[0].count > 0) {
+        console.log("⚠️ La base de datos ya contiene datos. ABORTANDO semilla para no duplicar.");
+        process.exit(0);
     }
 
-    // Insertar universidades de Venezuela de forma idempotente
-    const defaultUnis = [
-        ['Universidad Central de Venezuela (UCV)', 'Pública', 'Caracas'],
-        ['Universidad Simón Bolívar (USB)', 'Pública', 'Caracas'],
-        ['Universidad Católica Andrés Bello (UCAB)', 'Privada', 'Caracas / Guayana'],
-        ['Universidad de Los Andes (ULA)', 'Pública', 'Mérida'],
-        ['Universidad del Zulia (LUZ)', 'Pública', 'Maracaibo'],
-        ['Universidad de Carabobo (UC)', 'Pública', 'Valencia'],
-        ['Universidad de Oriente (UDO)', 'Pública', 'Oriente (Cumaná / Barcelona)'],
-        ['Universidad Metropolitana (UNIMET)', 'Privada', 'Caracas'],
-        ['Universidad Centroccidental Lisandro Alvarado (UCLA)', 'Pública', 'Barquisimeto'],
-        ['Universidad Católica Santa Rosa (UCSAR)', 'Privada', 'Caracas'],
-        ['Universidad Monteávila (UMA)', 'Privada', 'Caracas'],
-        ['Universidad Nacional Experimental Politécnica Antonio José de Sucre (UNEXPO)', 'Pública', 'Barquisimeto']
-    ];
+    // Insertar áreas principales
+    await dbUtils.run(`INSERT INTO areas (name, description) VALUES 
+        ('Ciencias de la Salud', 'Carreras relacionadas al cuidado, prevención y tratamiento de enfermedades.'),
+        ('Ingeniería y Tecnología', 'Carreras basadas en matemáticas, física impulsadas a resolver problemas prácticos.'),
+        ('Ciencias Sociales y Humanidades', 'Estudio del comportamiento humano, sociedad, historia y leyes.'),
+        ('Ciencias Básicas', 'Matemáticas, física, química o biología puras.'),
+        ('Arte y Arquitectura', 'Carreras creativas con un componente estético y funcional.'),
+        ('Educación', 'Formación y enseñanza en diversas disciplinas.')
+    `);
 
-    for (const [name, type, location] of defaultUnis) {
-        const exists = await dbUtils.query("SELECT id FROM universities WHERE name = ?", [name]);
-        if (exists.length === 0) {
-            await dbUtils.run("INSERT INTO universities (name, type, location) VALUES (?, ?, ?)", [name, type, location]);
-        }
-    }
+    // Insertar universidades de Venezuela (Públicas y Privadas)
+    await dbUtils.run(`INSERT INTO universities (name, type, location) VALUES 
+        ('Universidad Central de Venezuela (UCV)', 'Pública', 'Caracas'),
+        ('Universidad Simón Bolívar (USB)', 'Pública', 'Caracas'),
+        ('Universidad Católica Andrés Bello (UCAB)', 'Privada', 'Caracas / Guayana'),
+        ('Universidad de Los Andes (ULA)', 'Pública', 'Mérida'),
+        ('Universidad del Zulia (LUZ)', 'Pública', 'Maracaibo'),
+        ('Universidad de Carabobo (UC)', 'Pública', 'Valencia')
+    `);
 
     // Obtener IDs de áreas y universidades
     const areas = await dbUtils.query("SELECT id, name FROM areas");
@@ -60,7 +47,7 @@ async function seed() {
             labor_field: 'Hospitales clínicos, consultorios privados, ambulatorios, investigación, salud pública.',
             duration: '6 años',
             areaMatch: 'Salud',
-            unisMatch: ['UCV', 'ULA', 'LUZ', 'UC', 'UDO', 'UCLA']
+            unisMatch: ['UCV', 'ULA', 'LUZ', 'UC']
         },
         {
             title: 'Enfermería',
@@ -68,7 +55,7 @@ async function seed() {
             labor_field: 'Clínicas y hospitales, centros de rehabilitación, docencia.',
             duration: '5 años',
             areaMatch: 'Salud',
-            unisMatch: ['UCV', 'ULA', 'UC', 'UDO']
+            unisMatch: ['UCV', 'ULA', 'UC']
         },
         {
             title: 'Ingeniería en Computación',
@@ -76,7 +63,7 @@ async function seed() {
             labor_field: 'Empresas de tecnología, bancos, telecomunicaciones, desarrollo independiente (freelance).',
             duration: '5 años',
             areaMatch: 'Tecnología',
-            unisMatch: ['UCV', 'USB', 'UCLA', 'UNEXPO']
+            unisMatch: ['UCV', 'USB']
         },
         {
             title: 'Ingeniería Informática',
@@ -84,7 +71,7 @@ async function seed() {
             labor_field: 'Consultoría TI, corporaciones financieras, creación de startups.',
             duration: '5 años',
             areaMatch: 'Tecnología',
-            unisMatch: ['UCAB', 'UNIMET', 'UCLA']
+            unisMatch: ['UCAB']
         },
         {
             title: 'Psicología',
@@ -92,7 +79,7 @@ async function seed() {
             labor_field: 'Clínica, orientación educativa, recursos humanos en empresas.',
             duration: '5 años',
             areaMatch: 'Sociales',
-            unisMatch: ['UCV', 'UCAB', 'UCSAR', 'UMA']
+            unisMatch: ['UCV', 'UCAB']
         },
         {
             title: 'Arquitectura',
@@ -100,7 +87,7 @@ async function seed() {
             labor_field: 'Constructoras, diseño de interiores, planificación urbana o firmas de arquitectos.',
             duration: '5 años',
             areaMatch: 'Arte',
-            unisMatch: ['UCV', 'USB', 'ULA', 'UDO']
+            unisMatch: ['UCV', 'USB', 'ULA']
         },
         {
             title: 'Educación Mención Informática',
@@ -108,7 +95,7 @@ async function seed() {
             labor_field: 'Liceos, colegios, universidades, fundaciones educativas.',
             duration: '4 a 5 años',
             areaMatch: 'Educación',
-            unisMatch: ['UCAB', 'UMA', 'UDO']
+            unisMatch: ['UCAB']
         },
         {
             title: 'Física',
@@ -127,34 +114,19 @@ async function seed() {
             continue;
         }
 
-        // Buscar si la carrera ya existe
-        let careerDb = await dbUtils.query('SELECT id FROM careers WHERE title = ?', [current.title]);
-        let careerId;
-        
-        if (careerDb.length === 0) {
-            let carreraRes = await dbUtils.run(
-                'INSERT INTO careers (title, description, labor_field, duration, area_id) VALUES (?, ?, ?, ?, ?)',
-                [current.title, current.description, current.labor_field, current.duration, areaId]
-            );
-            careerId = carreraRes.lastID;
-        } else {
-            careerId = careerDb[0].id;
-        }
+        let carreraRes = await dbUtils.run(
+            'INSERT INTO careers (title, description, labor_field, duration, area_id) VALUES (?, ?, ?, ?, ?)',
+            [current.title, current.description, current.labor_field, current.duration, areaId]
+        );
         
         // Relacionar carrera con las universidades
         for (let uMatch of current.unisMatch) {
             let uId = getUniId(uMatch);
             if(uId) {
-                let relDb = await dbUtils.query(
-                    'SELECT 1 FROM career_university WHERE career_id = ? AND university_id = ?', 
-                    [careerId, uId]
+                await dbUtils.run(
+                    'INSERT INTO career_university (career_id, university_id) VALUES (?, ?)',
+                    [carreraRes.lastID, uId]
                 );
-                if (relDb.length === 0) {
-                    await dbUtils.run(
-                        'INSERT INTO career_university (career_id, university_id) VALUES (?, ?)',
-                        [careerId, uId]
-                    );
-                }
             }
         }
     }

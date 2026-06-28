@@ -42,28 +42,28 @@ export async function renderTest(container) {
               { text: "Formando a las nuevas generaciones de forma integral", area: "Educación" }
           ]
         },
-        { q: "¿Qué tipo de proyectos o tareas te entusiasma más liderar o realizar?", 
+        { q: "¿Cuál de estos proyectos te entusiasma más desarrollar?", 
           options: [
-              { text: "Investigar y resolver acertijos lógicos o matemáticos complicados", area: "Básicas" },
-              { text: "Planificar la logística y defensa de los derechos de un grupo", area: "Sociales" },
-              { text: "Desarrollar la identidad visual, ilustraciones o maquetas del proyecto", area: "Arte" },
-              { text: "Crear el código de programación o configurar los servidores", area: "Tecnología" }
+              { text: "Investigar sobre el funcionamiento de vacunas o tratamientos médicos", area: "Salud" },
+              { text: "Desarrollar un sistema de ciberseguridad o red inteligente", area: "Tecnología" },
+              { text: "Redactar un ensayo sobre derechos humanos o resolución de conflictos", area: "Sociales" },
+              { text: "Hacer el diseño arquitectónico de una biblioteca moderna y ecológica", area: "Arte" }
           ]
         },
-        { q: "¿Qué tema te genera más curiosidad al navegar por internet o leer noticias?", 
+        { q: "Si tuvieras que leer un libro por diversión, ¿de qué temática sería?", 
           options: [
-              { text: "Avances científicos en la cura de enfermedades y bienestar humano", area: "Salud" },
-              { text: "Nuevos métodos educativos y el futuro de las escuelas", area: "Educación" },
-              { text: "Descubrimientos en física teórica, astronomía o matemáticas avanzadas", area: "Básicas" },
-              { text: "Leyes, política internacional y movimientos culturales", area: "Sociales" }
+              { text: "Descubrimientos del cosmos, física teórica o álgebra", area: "Básicas" },
+              { text: "Métodos modernos de enseñanza o psicología del aprendizaje", area: "Educación" },
+              { text: "Historia de la medicina y grandes hitos de la cirugía", area: "Salud" },
+              { text: "Cómo se crearon las computadoras o el internet", area: "Tecnología" }
           ]
         },
-        { q: "Si pudieras realizar un voluntariado el próximo fin de semana, ¿cuál elegirías?", 
+        { q: "¿Qué tipo de problema o reto analítico disfrutas más resolver?", 
           options: [
-              { text: "Apoyar en el desarrollo de herramientas digitales para una ONG", area: "Tecnología" },
-              { text: "Dar tutorías y clases de refuerzo a niños con dificultades de aprendizaje", area: "Educación" },
-              { text: "Colaborar en campañas de vacunación o jornadas de atención primaria", area: "Salud" },
-              { text: "Organizar una galería comunitaria, muralismo o talleres de pintura", area: "Arte" }
+              { text: "Analizar patrones de datos o deducir fórmulas científicas", area: "Básicas" },
+              { text: "Mediar en discusiones complejas para llegar a un acuerdo justo", area: "Sociales" },
+              { text: "Explicar conceptos abstractos para que cualquiera los comprenda fácilmente", area: "Educación" },
+              { text: "Planificar la distribución espacial y estética de una estructura", area: "Arte" }
           ]
         }
     ];

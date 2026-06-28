@@ -4,7 +4,6 @@ import { renderTest } from './views/test.js';
 import { renderResults } from './views/results.js';
 import { renderUniversities } from './views/universities.js';
 import { renderAdmin } from './views/admin.js';
-import { renderAbout } from './views/about.js';
 
 const appContent = document.getElementById('app-content');
 
@@ -40,9 +39,6 @@ const router = async () => {
                 break;
             case 'admin':
                 await renderAdmin(appContent);
-                break;
-            case 'about':
-                await renderAbout(appContent);
                 break;
             default:
                 appContent.innerHTML = await renderHome();

@@ -65,5 +65,3 @@ Abre tu navegador web e ingresa a: **[http://localhost:3000](http://localhost:30
 ## 👩‍💻 Notas para Estudiantes
 - **Sin Dependencias de Compilación:** Para evitar herramientas como Webpack, Babel o Vite (que pueden abrumar al iniciar), el Frontend está escrito completamente en Vanilla JavaScript usando ES6 Modules (\`type="module"\` en tu navegador). Así podrás leer cada módulo nativamente.
 - **Cero problemas de CORS o Proxies:** Todo el frontend es servido en el mismo dominio (puerto 3000) a través del subidrectorio `/public` configurado en `server.js` con el middleware de Express.
-"# test_vocacional" 
-"# test_vocacional" 
