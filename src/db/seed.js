@@ -1,4 +1,4 @@
-import dbUtils from ('./database');
+const dbUtils = require('./database');
 
 async function seed() {
     console.log("Iniciando llenado de datos base...");

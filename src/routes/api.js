@@ -1,6 +1,6 @@
-import express from ('express');
+const express = require('express');
 const router = express.Router();
-import db from ('../db/database');
+const db = require('../db/database');
 
 // --- CARRERAS (CRUD) ---
 
