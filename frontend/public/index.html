@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orientador Vocacional | Tu futuro en Venezuela</title>
+    <meta name="description" content="Descubre tu vocación y encuentra la carrera universitaria ideal en Venezuela.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="app-background">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+    </div>
+
+    <header class="glass-nav">
+        <div class="nav-brand" style="display: flex; align-items: center; gap: 10px;">
+            <img src="/assets/logo.png" alt="Logo" style="width: 35px; height: 35px; border-radius: 50%; border: 2px solid var(--glass-border); object-fit: cover;" onerror="this.src='/assets/Logo Ibecu.png';">
+            <h1>Orientador Vocacional</h1>
+        </div>
+        <nav class="nav-links">
+            <a href="#home" class="nav-link">Inicio</a>
+            <a href="#test" class="nav-link">Test Vocacional</a>
+            <a href="#universities" class="nav-link">Universidades</a>
+            <a href="#admin" class="nav-link">Admin</a>
+        </nav>
+        <button class="mobile-menu-btn" aria-label="Abrir menú">☰</button>
+    </header>
+
+    <main id="app-content" class="container">
+        <!-- El contenido se inyecta dinámicamente aquí vía JS -->
+        <div class="glass-panel" style="text-align:center;">
+            <h2>Cargando...</h2>
+        </div>
+    </main>
+
+    <footer class="glass-footer">
+        <p>&copy; 2026 Orientador Vocacional Vzla. Diseñado para estudiantes de 5to año.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="/config.js"></script>
+    <script src="/js/app.js" type="module"></script>
+</body>
+</html>
